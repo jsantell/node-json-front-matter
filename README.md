@@ -10,7 +10,7 @@ Extract JSON front matter from strings and files in the style of [Jekyll's YAML 
 ### Methods
 
 * `parse( s )` Parses string `s`, returning an object with properties `attributes`, containing the JSON front matter, and `body` containing the rest.
-* `parseFile( path, callback( err, data ))` Parses file at `path`, calling the callback upon completion with `data` object containing `attribuets` and `body`, like the string parse method.
+* `parseFile( path, callback( err, data ))` Parses file at `path`, calling the callback upon completion with `data` object containing `attributes` and `body`, like the string parse method.
 
 ### Usage
 

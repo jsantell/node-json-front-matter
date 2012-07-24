@@ -1,7 +1,7 @@
 {
   "name" : "json-front-matter",
   "description" : "Extract JSON front matter from strings and files",
-  "version" : "0.1.2",
+  "version" : "0.1.3",
   "main" : "lib/json-front-matter",
   "devDependencies" : {
     "nodeunit" : ">= 0.7.4"

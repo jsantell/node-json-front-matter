@@ -18,3 +18,6 @@ Some bullet points
 * Paper
 * Rock
 * Scissors
+{{{
+    "adding more data" : "here for a test case"
+}}}

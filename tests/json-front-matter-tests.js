@@ -2,7 +2,8 @@ var
   jsonFm = require('../lib/json-front-matter.js'),
   fs     = require('fs'),
   testBody = '430a wlskdf 02;l4ka,l   ',
-  testString = '{{{"name":"json-fm","array":["a","b","c"]}}}'+testBody;
+  testString = '{{{"name":"json-fm","array":["a","b","c"]}}}'+testBody,
+  testIncorrectString = '{{{"name":"json-"incorrect"-fm","array":["a","b","c"]}}}'+testBody;
 
 module.exports = {
   'parse strings' : function ( test ) {
@@ -14,14 +15,26 @@ module.exports = {
     test.done();
   },
   'parse strings invalid' : function ( test ) {
-    test.expect( 4 );
+    test.expect( 8 );
     var out1 = jsonFm.parse( testBody );
     var out2 = jsonFm.parse( '' );
     var out3 = jsonFm.parse();
-    test.ok( out1.attributes, 'Attributes should still be an empty object' ); 
+    try {
+      jsonFm.parse( testIncorrectString );
+    }
+    catch (error) {
+      var out4 = error;
+    }
+    var out5 = jsonFm.parse( testString );
+
+    test.ok( out1.attributes, 'Attributes should still be an empty object' );
     test.ok( out1.body === testBody, 'Body should still return if no JSON found' );
     test.ok( !out2.body && !out2.attributes, 'If falsy data, should return empty obj' );
     test.ok( !out3.body && !out3.attributes, 'If falsy data, should return empty obj' );
+    test.ok( out4.name === 'SyntaxError', 'SyntaxError should be thrown while parsing an invalid string' );
+    test.ok( out5.attributes.name === 'json-fm', 'Should parse properties of JSON correctly despite previous failure' );
+    test.ok( out5.attributes.array[1] === 'b', 'Should parse properties of JSON correctly despite previous failure' );
+    test.ok( out5.body === testBody, 'Should return body separately despite previous failure' );
     test.done();
   },
   'parse files' : function ( test ) {

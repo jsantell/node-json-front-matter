@@ -1,4 +1,4 @@
-json-front-matter
+json-front-matter [![Build Status](https://travis-ci.org/jsantell/json-front-matter.png)](https://travis-ci.org/jsantell/json-front-matter)
 ======
 
 Extract JSON front matter from strings and files in the style of [Jekyll's YAML Front Matter](https://github.com/mojombo/jekyll/wiki/YAML-Front-Matter).

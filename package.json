@@ -1,7 +1,7 @@
 {
   "name" : "json-front-matter",
   "description" : "Extract JSON front matter from strings and files",
-  "version" : "0.1.6",
+  "version" : "1.0.0",
   "main" : "lib/json-front-matter",
   "scripts": {
     "test": "node tests/runTests.js"

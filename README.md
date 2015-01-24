@@ -1,5 +1,8 @@
-json-front-matter [![Build Status](https://travis-ci.org/jsantell/node-json-front-matter.png)](https://travis-ci.org/jsantell/node-json-front-matter)
+json-front-matter
 ======
+
+[![Build Status](http://img.shields.io/travis/jsantell/json-front-matter.svg?style=flat-square)](https://travis-ci.org/jsantell/json-front-matter)
+[![Build Status](http://img.shields.io/npm/v/json-front-matter.svg?style=flat-square)](https://www.npmjs.org/package/json-front-matter)
 
 Extract JSON front matter from strings and files in the style of [Jekyll's YAML Front Matter](https://github.com/mojombo/jekyll/wiki/YAML-Front-Matter).
 
@@ -29,7 +32,10 @@ console.log( out.attributes.array ) // [ 1, 2, 3 ]
 
 See [./tests/data/test.md](https://raw.github.com/jsantell/node-json-front-matter/master/tests/data/test.md) for example of JSON Front Matter in a markdown file. The outer JSON is encapsulated via triple curly brackets. `{{{ "tags" : [ 'rock', 'paper', 'scissors' ] }}}`
 
-Testing
----
+### Testing
 
 Run `node tests/runTests.js` from project root -- testing uses `nodeunit`
+
+### License
+
+MIT License, Copyright (c) 2012 Jordan Santell

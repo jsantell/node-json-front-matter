@@ -1,7 +1,7 @@
 json-front-matter
 ======
 
-[![Build Status](http://img.shields.io/travis/jsantell/json-front-matter.svg?style=flat-square)](https://travis-ci.org/jsantell/json-front-matter)
+[![Build Status](http://img.shields.io/travis/jsantell/node-json-front-matter.svg?style=flat-square)](https://travis-ci.org/jsantell/node-json-front-matter)
 [![Build Status](http://img.shields.io/npm/v/json-front-matter.svg?style=flat-square)](https://www.npmjs.org/package/json-front-matter)
 
 Extract JSON front matter from strings and files in the style of [Jekyll's YAML Front Matter](https://github.com/mojombo/jekyll/wiki/YAML-Front-Matter).
